@@ -1,0 +1,110 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f0f2f5;
+  margin: 0;
+  padding: 20px;
+  color: #333;
+}
+
+.container {
+  max-width: 960px;
+  margin: auto;
+}
+
+h1 {
+  text-align: center;
+  color: #0077cc;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input[type="text"] {/*De esta manera es una facil solo si no agregas un class ya que no hay mas que un solo button*/
+  flex: 1;
+  padding: 10px;
+  border: 2px solid #0077cc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+button[type="submit"] {
+  padding: 10px 20px;
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #005fa3;
+}
+
+#image-results {
+  display: grid;  /*ES una manera muy facil mas que flex pero flex seria para text nav*/ 
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px; /*alegado de imagen como margin*/
+}
+
+.image-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  
+  transition: transform 0.2s ease;
+}
+/*
+.image-card:hover {
+  
+}
+/**/
+.image-card img {
+  width: 100%; /*con esto avarca toda la imgen*/
+  display: block;
+}
+
+.image-card p { 
+  padding: 10px;
+  margin: 0;
+  font-size: 14px;
+  color: #555;
+  text-align: center;
+}
+
+#error {
+  color: red;
+}
+
+#pagination {
+  margin-top: 30px;
+  text-align: center;
+}
+
+#pagination button {
+  margin: 0 5px;
+  padding: 8px 12px;
+  border: 1px solid #0077cc;
+  background-color: white;
+  color: #0077cc;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+#pagination button:hover { /*este es el efecto de  los botones y sus colores*/
+  background-color: #0077cc;
+  color: white;
+}
+
+#pagination .active {
+  background-color: #0077cc;
+  color: white;
+  font-weight: bold;
+}
